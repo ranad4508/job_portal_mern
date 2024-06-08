@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import Card from "../components/Card";
 import Jobs from "./Jobs";
 import Sidebar from "../sidebar/Sidebar";
+import NewsLetter from "../components/NewsLetter";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -64,6 +65,7 @@ const Home = () => {
         }) =>
           jobLocation.toLowerCase() === selected.toLowerCase() ||
           parseInt(maxPrice) <= parseInt(selected) ||
+          postingDate >= selected ||
           experienceLevel.toLowerCase() === selected.toLowerCase() ||
           salaryType.toLowerCase() === selected.toLowerCase() ||
           employmentType.toLowerCase() === selected.toLowerCase()
@@ -139,7 +141,7 @@ const Home = () => {
           {filteredItems.length > 0 && (
             <div className="flex justify-center mt-4 space-x-8">
               <button
-                className="hover:text-blue focus:text-red-500"
+                className="hover:text-blue focus:text-red-500 hover:underline"
                 onClick={prevPage}
                 disabled={currentPage === 1}
               >
@@ -150,7 +152,7 @@ const Home = () => {
                 {Math.ceil(filteredItems.length / itemsPerPage)}
               </span>
               <button
-                className="hover:text-blue focus:text-red-500"
+                className="hover:text-blue focus:text-red-500 hover:underline"
                 onClick={nextPage}
                 disabled={
                   currentPage === Math.ceil(filteredItems.length / itemsPerPage)
@@ -162,7 +164,9 @@ const Home = () => {
           )}
         </div>
         {/* Right side */}
-        <div className="bg-white p-4 rounded">Right</div>
+        <div className="bg-white p-4 rounded">
+          <NewsLetter />
+        </div>
       </div>
     </div>
   );

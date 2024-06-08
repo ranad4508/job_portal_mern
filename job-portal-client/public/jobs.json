@@ -8,7 +8,7 @@
     "maxPrice": "30",
     "salaryType": "Yearly",
     "jobLocation": "Kathmandu",
-    "postingDate": "2023-11-03",
+    "postingDate": "2024-06-03",
     "experienceLevel": "Any experience",
     "employmentType": "Full-time",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
@@ -22,9 +22,9 @@
     "maxPrice": "50",
     "salaryType": "Yearly",
     "jobLocation": "Lalitpur",
-    "postingDate": "2023-11-02",
+    "postingDate": "2024-05-20",
     "experienceLevel": "Internship",
-    "employmentType": "Temporary",
+    "employmentType": "Remote",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
   },
   {
@@ -36,7 +36,7 @@
     "maxPrice": "50",
     "salaryType": "Yearly",
     "jobLocation": "Bhaktapur",
-    "postingDate": "2023-10-28",
+    "postingDate": "2024-06-08",
     "experienceLevel": "Any experience",
     "employmentType": "Full-time",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
@@ -50,7 +50,7 @@
     "maxPrice": "50",
     "salaryType": "Monthly",
     "jobLocation": "Pokhara",
-    "postingDate": "2023-10-05",
+    "postingDate": "2024-05-17",
     "experienceLevel": "Work remotely",
     "employmentType": "Part-time",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
@@ -64,7 +64,7 @@
     "maxPrice": "75",
     "salaryType": "Yearly",
     "jobLocation": "Pokhara",
-    "postingDate": "2023-10-28",
+    "postingDate": "2024-06-01",
     "experienceLevel": "Intership",
     "employmentType": "Full-time",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
@@ -78,9 +78,9 @@
     "maxPrice": "120",
     "salaryType": "Yearly",
     "jobLocation": "Chitwan",
-    "postingDate": "2023-10-05",
+    "postingDate": "2024-06-05",
     "experienceLevel": "Intership",
-    "employmentType": "Temporary",
+    "employmentType": "Remote",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
   },
   {
@@ -92,7 +92,7 @@
     "maxPrice": "80",
     "salaryType": "Yearly",
     "jobLocation": "Kathmandu",
-    "postingDate": "2023-11-05",
+    "postingDate": "2024-06-05",
     "experienceLevel": "Any experience",
     "employmentType": "Full-time",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
@@ -106,9 +106,9 @@
     "maxPrice": "50",
     "salaryType": "Yearly",
     "jobLocation": "Lalitpur",
-    "postingDate": "2023-10-28",
+    "postingDate": "2024-06-01",
     "experienceLevel": "Internship",
-    "employmentType": "Temporary",
+    "employmentType": "Remote",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
   },
   {
@@ -120,7 +120,7 @@
     "maxPrice": "50",
     "salaryType": "Yearly",
     "jobLocation": "Bhaktapur",
-    "postingDate": "2023-10-28",
+    "postingDate": "2024-06-08",
     "experienceLevel": "Any experience",
     "employmentType": "Full-time",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
@@ -134,7 +134,7 @@
     "maxPrice": "50",
     "salaryType": "Monthly",
     "jobLocation": "Pokhara",
-    "postingDate": "2023-10-05",
+    "postingDate": "2024-06-05",
     "experienceLevel": "Work remotely",
     "employmentType": "Part-time",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
@@ -148,7 +148,7 @@
     "maxPrice": "75",
     "salaryType": "Yearly",
     "jobLocation": "Pokhara",
-    "postingDate": "2023-10-28",
+    "postingDate": "2024-06-06",
     "experienceLevel": "Intership",
     "employmentType": "Full-time",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
@@ -162,9 +162,9 @@
     "maxPrice": "120",
     "salaryType": "Yearly",
     "jobLocation": "Chitwan",
-    "postingDate": "2022-10-05",
+    "postingDate": "2024-06-04",
     "experienceLevel": "Intership",
-    "employmentType": "Temporary",
+    "employmentType": "Remote",
     "description": "Mollit in laborum tempor Lorem incididunt irure. Aute eu ex ad sunt. Pariatur sint culpa do incididunt eiusmod eiusmod culpa. laborum tempor Lorem incididunt."
   }
 ]

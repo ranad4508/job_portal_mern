@@ -14,32 +14,39 @@ const Card = ({ data }) => {
     postingDate,
     description,
   } = data;
+
   return (
     <section className="card">
       <Link to={"/"} className="flex gap-4 flex-col sm:flex-row items-start">
-        <img src={companyLogo} alt="" />
-        <div className="">
-          <h4 className="text-primary mb-1">{companyName}</h4>
-          <h3 className="text-lg font-semibold mb-2">{jobTitle}</h3>
-          <div className="text-primary/70 text-base flex flex-wrap gap-2 mb-2">
-            <span className="flex items-center gap-2 text-sm">
+        <img
+          src={companyLogo}
+          alt={companyName}
+          className="w-16 h-16 sm:w-20 sm:h-20 rounded-full"
+        />
+        <div className="flex-1">
+          <h4 className="text-primary text-lg sm:text-xl mb-1">
+            {companyName}
+          </h4>
+          <h3 className="text-lg sm:text-xl font-semibold mb-2">{jobTitle}</h3>
+          <div className="text-primary/70 text-sm sm:text-base flex flex-wrap gap-2 mb-2">
+            <span className="flex items-center gap-2">
               <FiMapPin size={18} className="text-gray-500" />
               {jobLocation}
             </span>
-            <span className="flex items-center gap-2 text-sm">
+            <span className="flex items-center gap-2">
               <FiClock size={18} className="text-gray-500" />
               {employmentType}
             </span>
-            <span className="flex items-center gap-2 text-sm">
+            <span className="flex items-center gap-2">
               <FiDollarSign size={18} className="text-gray-500" />
               {minPrice}--{maxPrice}k
             </span>
-            <span className="flex items-center gap-2 text-sm">
+            <span className="flex items-center gap-2">
               <FiCalendar size={18} className="text-gray-500" />
               {postingDate}
             </span>
           </div>
-          <p className="text-base text-primary/70">{description}</p>
+          <p className="text-sm sm:text-base text-primary/70">{description}</p>
         </div>
       </Link>
     </section>
