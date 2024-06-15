@@ -4,6 +4,7 @@ import Card from "../components/Card";
 import Jobs from "./Jobs";
 import Sidebar from "../sidebar/Sidebar";
 import NewsLetter from "../components/NewsLetter";
+import JobPostingData from "../sidebar/JobPostingData";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -11,6 +12,8 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
+  const [query, setQuery] = useState("");
+  const [postingDate, setPostingDate] = useState("");
 
   useEffect(() => {
     setIsLoading(true);
@@ -23,19 +26,22 @@ const Home = () => {
   }, []);
 
   // Handle input change
-  const [query, setQuery] = useState("");
   const handleInputChange = (event) => {
     setQuery(event.target.value);
     setCurrentPage(1); // Reset to first page
   };
 
-  // Radio based filtering
+  // Handle category change
   const handleChange = (event) => {
-    setSelectedCategory(event.target.value);
+    if (event.target.name === "postingDate") {
+      setPostingDate(event.target.value);
+    } else {
+      setSelectedCategory(event.target.value);
+    }
     setCurrentPage(1); // Reset to first page
   };
 
-  // Button based filtering
+  // Handle button click
   const handleClick = (event) => {
     setSelectedCategory(event.target.value);
     setCurrentPage(1); // Reset to first page
@@ -61,11 +67,9 @@ const Home = () => {
           experienceLevel,
           salaryType,
           employmentType,
-          postingDate,
         }) =>
           jobLocation.toLowerCase() === selected.toLowerCase() ||
           parseInt(maxPrice) <= parseInt(selected) ||
-          postingDate >= selected ||
           experienceLevel.toLowerCase() === selected.toLowerCase() ||
           salaryType.toLowerCase() === selected.toLowerCase() ||
           employmentType.toLowerCase() === selected.toLowerCase()
@@ -73,6 +77,14 @@ const Home = () => {
     }
 
     return filteredJobs;
+  };
+
+  // Filter jobs by posting date
+  const filterByPostingDate = (jobs, postingDate) => {
+    if (!postingDate) return jobs;
+    return jobs.filter(
+      (job) => new Date(job.postingDate) >= new Date(postingDate)
+    );
   };
 
   // Calculate the index range
@@ -98,17 +110,19 @@ const Home = () => {
 
   // Get filtered jobs based on the selected category and query
   const filteredItems = filterJobs(jobs, selectedCategory, query);
+  // Further filter jobs by posting date
+  const finalFilteredItems = filterByPostingDate(filteredItems, postingDate);
 
   // Get paginated jobs
-  const { startIndex, endIndex } = calculatePageRange(filteredItems);
-  const paginatedJobs = filteredItems.slice(startIndex, endIndex);
+  const { startIndex, endIndex } = calculatePageRange(finalFilteredItems);
+  const paginatedJobs = finalFilteredItems.slice(startIndex, endIndex);
 
   return (
     <div className="sm:mx-8 mx-5 lg:mx-0">
       <Banner query={query} handleInputChange={handleInputChange} />
 
       {/* Main contents */}
-      <div className="bg-[]#fafafa md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12">
+      <div className="bg-[#fafafa] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12">
         {/* Left side */}
         <div className="bg-white p-4 rounded">
           <Sidebar handleChange={handleChange} handleClick={handleClick} />
@@ -120,8 +134,8 @@ const Home = () => {
           ) : paginatedJobs.length > 0 ? (
             <>
               <h3 className="text-lg font-bold mb-2">
-                Showing {startIndex + 1} - {endIndex} of {filteredItems.length}{" "}
-                Jobs
+                Showing {startIndex + 1} - {endIndex} of{" "}
+                {finalFilteredItems.length} Jobs
               </h3>
               <Jobs
                 result={paginatedJobs.map((data, i) => (
@@ -138,7 +152,7 @@ const Home = () => {
             </>
           )}
           {/* Pagination */}
-          {filteredItems.length > 0 && (
+          {finalFilteredItems.length > 0 && (
             <div className="flex justify-center mt-4 space-x-8">
               <button
                 className="hover:text-blue focus:text-red-500 hover:underline"
@@ -149,13 +163,14 @@ const Home = () => {
               </button>
               <span className="mx-2">
                 Page {currentPage} of{" "}
-                {Math.ceil(filteredItems.length / itemsPerPage)}
+                {Math.ceil(finalFilteredItems.length / itemsPerPage)}
               </span>
               <button
                 className="hover:text-blue focus:text-red-500 hover:underline"
                 onClick={nextPage}
                 disabled={
-                  currentPage === Math.ceil(filteredItems.length / itemsPerPage)
+                  currentPage ===
+                  Math.ceil(finalFilteredItems.length / itemsPerPage)
                 }
               >
                 Next

@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import "../index.css";
 import App from "../App";
 import Home from "../pages/Home";
+import CreateJob from "../pages/CreateJob";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/post-job",
+        element: <CreateJob />,
       },
     ],
   },
